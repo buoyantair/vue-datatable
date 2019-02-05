@@ -1,24 +1,42 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id='app'>
+    <img alt='Vue logo' src='./assets/logo.png'>
+    <Table :markSheet="markSheet" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Table from './components/Table'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Table
+  },
+  data () {
+    return {
+      markSheet: [
+        {
+          subject: 'math',
+          marks: 80
+        },
+        {
+          subject: 'science',
+          marks: 70
+        },
+        {
+          subject: 'తెలుగు',
+          marks: 90
+        }
+      ]
+    }
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
